@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>iFrame</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='iFrameJS_ChoiEmily.js'></script>
+    <style>
+        .popup{ /*contenedor*/
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .popup .show{
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        @-webkit-keyframes fadeIn{
+            from{opacity:0;}
+            to{opacity: 1;}
+        }
+
+        @keyframes fadeIn{
+            from{opacity: 0;
+            to{opacity: 1;}
+            }
+        }
+    </style>
+</head>
+<body> 
+    <iframe src="https://www.hoy.com.py/" id="myFrame"></iframe>
+    <button id="atras" onclick="back()">Atras</button>
+    <button id="siguiente" onclick="next()">Siguiente</button>
+
+    <div class="popup" onclick="popupFunction()">AgregarPagina
+        <span class="popuptxt" id="myPopup"> hola</span>
+    </div>
+
+</body>
+</html>
